@@ -1,0 +1,26 @@
+{
+  "name": "webpack-platzi",
+  "version": "1.0.0",
+  "description": "Curso Webpack 4 Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnoldRestrepo/webpack-platzi.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "@restrepo_arnold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArnoldRestrepo/webpack-platzi/issues"
+  },
+  "homepage": "https://github.com/ArnoldRestrepo/webpack-platzi#readme",
+  "devDependencies": {
+    "webpack": "4.32.2",
+    "webpack-cli": "3.3.2"
+  }
+}
