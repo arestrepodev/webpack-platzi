@@ -1,15 +1,14 @@
 const path = require('path');
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const config = {
   mode: 'development',
   entry: path.resolve(__dirname, 'src', 'js', 'index.js'),
-  devServer: {
-    hot: true,
-    open: true
-  },
+  // devServer: {
+  //   hot: true,
+  //   open: true
+  // },
   module: {
     rules: [
       {
@@ -26,7 +25,7 @@ const config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Webpack Dev Server'
+      title: 'Babel'
     })
   ],
   resolve: {

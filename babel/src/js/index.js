@@ -1,10 +1,13 @@
 import '../css/index.css';
-import text from './text';
+import search from "./search"
+import render from "./render"
 
-text();
+const id = prompt("¿Quién es ese Pokemón?");
 
-if (module.hot) {
-  module.hot.accept('./text.js', function() {
-    text();
-  });
-}
+search(id)
+  .then((data) => {
+    console.log(data);
+    render(data);
+  }).catch(error => {
+    Error(error);
+  })
