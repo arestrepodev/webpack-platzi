@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "./data.json"
+import Loader from "./Loader"
 
 const App = () => {
-  console.log(data);
+  const [loaderList, setLoaderList] = useState([])
   
+  const handleClick = (event) => {
+    event.preventDefault();
+    setLoaderList(data.loaders)
+  }
+
   return(
-    <div>
-      <p>Que linda app hecha en React</p>
-    </div>
+    <article>
+      <ul>
+        {loaderList.map(item => {
+          return (
+            <Loader {...item} key={item.id}/>
+          )
+        })}
+      </ul>
+      <button type="button" onClick={handleClick}>Mostrar lo aprendido</button>
+    </article>
   )
 }
 
