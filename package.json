@@ -16,6 +16,8 @@
     "build:url": "webpack-dev-server --config ./url-loader/webpack.config.js",
     "build:prepro": "webpack-dev-server --config ./prepro/webpack.config.js",
     "build:duplicate": "webpack --config ./prevent-duplication/webpack.config.js",
+    "build:dll": "webpack --config ./dll/webpack.dll.config.js",
+    "build:duplicate-fast": "webpack --config ./dll/webpack.config.js",
     "server": "node server.js"
   },
   "repository": {
