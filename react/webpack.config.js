@@ -12,8 +12,8 @@ const config = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: ['babel-loader'], 
-        exclude: "/nonde_modules/"
+        use: ['babel-loader'],
+        exclude: '/nonde_modules/'
       },
       {
         test: /\.css$/,
@@ -28,19 +28,19 @@ const config = {
       minify: {
         collapseWhitespace: true
       },
-      template: path.resolve(__dirname, "src/index.html")
+      template: path.resolve(__dirname, 'src/index.html')
     })
   ],
   resolve: {
     alias: {
-      Node: path.resolve(__dirname, "node_modules")
+      Node: path.resolve(__dirname, 'node_modules')
     },
-    extensions: [".js", ".jsx"]
+    extensions: ['.js', '.jsx']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle.js'
-  },
+  }
 };
 
 module.exports = config;
