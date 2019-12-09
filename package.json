@@ -56,7 +56,7 @@
     "stylus-loader": "3.0.2",
     "url-loader": "2.3.0",
     "webpack": "4.32.2",
-    "webpack-cli": "3.3.2",
+    "webpack-cli": "^3.3.2",
     "webpack-dev-server": "3.9.0"
   },
   "dependencies": {

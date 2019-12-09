@@ -3,12 +3,11 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    modules: ['react', 'react-dom']
+    modules: ['react', 'react-dom', 'react-router-dom']
   },
-  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js',
+    filename: 'js/[name].[hash].dll.js',
     library: '[name]'
   },
   plugins: [
