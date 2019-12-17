@@ -1,51 +1,51 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-  mode: 'development',
   entry: {
-    app: path.resolve(__dirname, 'src/main.js')
+    app: path.resolve(__dirname,'src/main.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
-    publicPath: "http://localhost:9000/",
-    chunkFilename: "js/[id].[chunkhash].js"
+    publicPath: 'http://localhost:9000/',
+    chunkFilename: 'js/[id].[chunkhash].js'
   },
   devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
     open: true,
     port: 9000,
     hot: true,
-    contentBase:path.resolve(__dirname, "dist")
   },
-  resolve:{
+  resolve: {
     alias: {
-      '@': path.resolve(__dirname, "src")
+      '@': path.resolve(__dirname, 'src')
     }
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        use: 'vue-loader'      
+        use: 'vue-loader',
       },
       {
         test: /\.js$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css|postcss$/,
         use: [
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
               importLoaders: 1
             }
           },
-          'postcss-loader',
+          'postcss-loader'
         ]
       },
       {
@@ -53,10 +53,10 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            outputPath: "assets/"
+            outputPath: 'assets/',
           }
         }
-      }
+      },
     ]
   },
   plugins: [
@@ -64,6 +64,6 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html')
-    })
-  ]
-};
+    }),
+  ],
+}

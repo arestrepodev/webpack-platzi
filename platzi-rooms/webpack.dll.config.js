@@ -5,7 +5,13 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   entry: {
-    modules: ['react', 'react-dom', 'react-router-dom']
+    modules: [ 
+      'firebase',
+      'tiny-slider',
+      'vue',
+      'vue-router',
+      'vuex'
+    ]
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
